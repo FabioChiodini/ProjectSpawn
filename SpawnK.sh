@@ -11,12 +11,13 @@ printenv AWS_VPC_ID
 UUIDK=$(cat /proc/sys/kernel/random/uuid)
 
 #docker-machine create --driver amazonec2 
-docker-machine create --driver amazonec2 --amazonec2-access-key $AWS_ACCESS_KEY --amazonec2-secret-key $AWS_SECRET_KEY --amazonec2-vpc-id  $AWS_VPC_ID --amazonec2-zone $AWS_ZONE --amazonec2-region $AWS_DEFAULT_REGION SPAWN-$UUIDK
+docker-machine create --driver amazonec2 --amazonec2-access-key $K1_AWS_ACCESS_KEY --amazonec2-secret-key $K1_AWS_SECRET_KEY --amazonec2-vpc-id  $K1_AWS_VPC_ID --amazonec2-zone $K1_AWS_ZONE --amazonec2-region $K1_AWS_DEFAULT_REGION SPAWN-$UUIDK
 
 #Open port 80 on VM
 
 
-#Deploys docker
+#Gets rid of VM
+docker-machine rm SPAWN-$UUIDK
 
 
 #Displays Public IP
