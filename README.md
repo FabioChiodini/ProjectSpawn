@@ -31,3 +31,4 @@ export K1_AWS_DEFAULT_REGION=us-east-1
 
 export AWS_DEFAULT_REGION=us-east-1
 
+The first five variable are used by the docker-machine command, the last one is used by aws cli (to edit the security group)
