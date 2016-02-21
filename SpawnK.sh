@@ -18,6 +18,9 @@ echo ---
 echo VM SPAWN-$UUIDK CREATED
 echo ---
 
+#Open port 80 on VM
+aws ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+
 #Creates a docker container remotely
 #docker-machine env SPAWN-$UUIDK
 #eval $(docker-machine env SPAWN-$UUIDK)
@@ -28,8 +31,7 @@ docker-machine env SPAWN-$UUIDK > /home/ec2-user/Docker1
 docker run --name docker-nginx -p 80:80 nginx
 
 
-#Open port 80 on VM
-aws ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+
 echo ----
 echo connect to Public IP
 echo ----
