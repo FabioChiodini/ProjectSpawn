@@ -2,11 +2,17 @@
 Code to spawn Web Servers accross Clouds
 
 This piece of code (using a master AMI installed with https://github.com/FabioChiodini/AWSDockermachine ) does the following:
+
 •	Load env variables from a file (rough) to connect to AWS
+
 •	Creates a new AMI using docker-machine
+
 •	Opens port 80 for that AMI on AWS Security Groups
+
 •	Launches a nginx web server in the docker-machine provisioned AMI
+
 •	Prints out the public ip for the web server
+
 •	[OPTIONAL for testing] Destroys the AMI provisioned
 
 It uses a file to load the variables needed (/home/ec2-user/Cloud1).
