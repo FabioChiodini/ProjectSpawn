@@ -1,5 +1,5 @@
 # ProjectSpawn
-Code to spawn Web Servers accross Clouds
+Code to spawn Web Servers in Docker Containers accross Clouds
 
 This piece of code (using a master AMI installed with https://github.com/FabioChiodini/AWSDockermachine ) does the following:
 
