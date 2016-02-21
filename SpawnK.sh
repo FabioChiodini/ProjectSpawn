@@ -28,12 +28,13 @@ aws ec2 authorize-security-group-ingress --group-name docker-machine --protocol 
 docker-machine env SPAWN-$UUIDK > /home/ec2-user/Docker1
 . /home/ec2-user/Docker1
 
-docker run --name docker-nginx -p 80:80 nginx
+docker run -d --name docker-nginx -p 80:80 nginx
 
-
+publicipK=$(docker-machine ip SPAWN-$UUIDK)
 
 echo ----
 echo connect to Public IP
+echo publicipK=$publicipK
 echo ----
 
 
