@@ -12,6 +12,7 @@ This piece of code (using a master AMI installed with https://github.com/FabioCh
 It uses a file to load the variables needed (/home/ec2-user/Cloud1).
 
 This file has the following format:
+
 export K1_AWS_ACCESS_KEY=AKXXXXXX
 
 export K1_AWS_SECRET_KEY=LXXXXXXXXXX
