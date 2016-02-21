@@ -29,7 +29,7 @@ docker run --name docker-nginx -p 80:80 nginx
 
 
 #Open port 80 on VM
-ws ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 echo ----
 echo connect to Public IP
 echo ----
