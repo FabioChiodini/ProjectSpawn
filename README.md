@@ -15,7 +15,9 @@ This piece of code (using a master AMI installed with https://github.com/FabioCh
 
 •	[OPTIONAL for testing] Destroys the AMI provisioned
 
-It uses a file to load the variables needed (/home/ec2-user/Cloud1).
+## Configuration File
+
+This code uses a file to load the variables needed (/home/ec2-user/Cloud1).
 
 This file has the following format:
 
